@@ -1,5 +1,18 @@
 package Command_design_pattern;
 
-public class InputHandler {
-    
+import javautil.HashMap;
+
+public class InputHandler 
+{
+    private HashMap<String, command> commands;
+
+    public InputHandler(Document document)
+    {
+
+    }
+
+    public void inputEntered(String data)
+    {
+        
+    }
 }
