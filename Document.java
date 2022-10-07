@@ -11,8 +11,9 @@ public class Document {
 
     public Document(String fileName){
         this.fileName = fileName;
-        FileManipulator.writeFile(fileName, lines);
         lines = new ArrayList<>();
+        FileManipulator.writeFile(fileName, lines);
+        
     }
 
     public String view(){
