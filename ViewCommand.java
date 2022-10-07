@@ -1,5 +1,5 @@
 package Command_design_pattern;
 
-public class ViewCommand {
+public class ViewCommand extends Command{
     
 }
