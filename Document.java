@@ -11,21 +11,23 @@ public class Document {
 
     public Document(String fileName){
         this.fileName = fileName;
+        FileManipulator.writeFile(fileName, lines);
+        lines = new ArrayList<>();
     }
 
     public String view(){
-        ViewCommand.execute();
+        return ViewCommand.execute();
     }
 
     public String append(String line){
-        AppendCommand.exdcute();
+        return AppendCommand.execute();
     }
 
     public String write(String line){
-        WriteCommand.execute();
+        return WriteCommand.execute();
     }
 
     public String save(){
-        SaveCommand.execute();
+        return SaveCommand.execute();
     }
 }
