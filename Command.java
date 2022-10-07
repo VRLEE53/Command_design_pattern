@@ -1,5 +1,9 @@
 package Command_design_pattern;
 
 public abstract class Command {
+    protected Document document; 
     
+    public Command(Document document) {
+        
+    }
 }
