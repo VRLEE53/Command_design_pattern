@@ -1,6 +1,5 @@
 package Command_design_pattern;
 
-<<<<<<< HEAD
 import java.util.Scanner;
 
 public class WriteCommand extends Command{
@@ -13,8 +12,4 @@ public class WriteCommand extends Command{
         String execute = "The line was written to the file"; 
         return execute; 
     }
-=======
-public class WriteCommand extends Command{
-    
 }
->>>>>>> abc133a3429b77334c0f97f7eb38fd976f750cf0

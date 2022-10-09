@@ -1,6 +1,6 @@
 package Command_design_pattern;
 
-import javautil.HashMap;
+import java.util.HashMap;
 
 public class InputHandler 
 {

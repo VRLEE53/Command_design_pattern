@@ -21,7 +21,7 @@ public class Document {
             lines.add(line);
         }
         
-        return "";
+        return null;
     }
 
     public String append(String line){

@@ -1,9 +1,15 @@
 package Command_design_pattern;
 
-public class AppendCommand extends Command{
+import java.util.Scanner;
 
-    public AppendCommand(Document document) {
-        
+public class AppendCommand extends Command{
+    private Scanner in; 
+    public AppendCommand(Document doc) {
+        super(doc);  
+    }
+    public String execute() {
+        String execute = "The line has been appended to the document.";
+        return execute; 
     }
     
 }
