@@ -33,7 +33,7 @@ public class InputHandler
     {
         for(String command: commands.keySet()){
             if (command.equals(data)){
-                commands.get(command).execute();
+                System.out.println(commands.get(command).execute());
             }
         }
     }

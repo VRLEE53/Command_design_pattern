@@ -14,7 +14,7 @@ public class ViewCommand extends Command{
     }
         
     /**
-     * Calls the method view in the document class
+     * Calls the method view in the document
      */
     public String execute(){
         return document.view();

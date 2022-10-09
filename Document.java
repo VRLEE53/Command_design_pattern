@@ -28,10 +28,10 @@ public class Document {
         String document = border();
 
         for(String line : lines){
-            document += "/n|     " + line;
-            int space = longestLine() - line.length();
+            document += "\n|     " + line;
 
-            for (int i = 0; i <= space; i++){
+            int space = longestLine() - line.length();
+            for (int i = 0; i < space; i++){
                 document += " ";
             }
 
@@ -48,7 +48,7 @@ public class Document {
      */
     private int longestLine(){
         int width = 0;
-        for (String line : FileManipulator.readFile(fileName)){
+        for (String line : lines){
             if (line.length() > width)
                 width = line.length();
         }       
@@ -60,11 +60,11 @@ public class Document {
      * @return the border with the correct amount of spaces
      */
     private String border(){
-        String border = "/n";
-        for(int i = 0; i <= longestLine() + 10; i++){
+        String border = "\n";
+        for(int i = 0; i < (longestLine() + 10); i++){
             border += "_";
         }
-        border+="/n";
+        border+="\n";
         return border;
     }
 
@@ -75,7 +75,7 @@ public class Document {
      */
     public String append(String line){
        lines.add(line);
-       return "The line has been appended to the document /n";
+       return "The line has been appended to the document \n";
     }
 
     /**
@@ -86,7 +86,7 @@ public class Document {
     public String write(String line){
         lines.clear();
         lines.add(line);
-        return "The line was written to the file /n";
+        return "The line was written to the file \n";
     }
 
     /**
@@ -96,9 +96,9 @@ public class Document {
     public String save(){
         try {
             FileManipulator.writeFile(fileName, lines);
-            return "The file has been saved /n";
+            return "The file has been saved \n";
         } catch (Exception e) {
-            return "Sorry, we cannot save at this time /n";
+            return "Sorry, we cannot save at this time \n";
         }
     }
 }
