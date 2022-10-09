@@ -17,8 +17,16 @@ public class Document {
     }
 
     public String view(){
+<<<<<<< HEAD
                
         return "";
+=======
+        for (String line : FileManipulator.readFile(fileName)){
+            lines.add(line);
+        }
+        
+        return null;
+>>>>>>> bb74f5724eaf4d8e2ec431c2ea2595a588226de6
     }
 
     public String append(String line){
