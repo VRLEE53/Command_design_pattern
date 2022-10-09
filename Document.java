@@ -17,23 +17,23 @@ public class Document {
     }
 
     public String view(){
-        for (String line : FileManipulator.readFile(fileName)){
-            lines.add(line);
-        }
-        
+               
         return "";
     }
 
     public String append(String line){
        lines.add(line);
-       FileManipulator.writeFile(fileName, lines);
+       return "The line has been appended to the document";
     }
 
     public String write(String line){
-        
+        lines.clear();
+        lines.add(line);
+        return "The line was written to the file";
     }
 
     public String save(){
-        
+        FileManipulator.writeFile(fileName, lines);
+        return "The file has been saved";
     }
 }
